@@ -1,0 +1,53 @@
+{
+  "name": "haptic-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/drei": "^9.105.6",
+    "@react-three/fiber": "^8.16.6",
+    "@tanstack/react-query": "^5.45.0",
+    "@web3modal/wagmi": "^5.0.2",
+    "cookies-next": "^4.2.1",
+    "glsl-random": "^0.0.5",
+    "gsap": "^3.12.5",
+    "html-react-parser": "^5.1.10",
+    "js-base64": "^3.7.7",
+    "lenis": "^1.0.45",
+    "next": "^14.2.3",
+    "next-compose-plugins": "^2.2.1",
+    "nodemailer": "^6.9.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.76.0",
+    "three": "^0.164.1",
+    "tunnel-rat": "^0.1.2",
+    "viem": "^2.14.2",
+    "wagmi": "^2.10.2"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.3",
+    "daisyui": "^4.10.5",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.15.2",
+    "file-loader": "^6.2.0",
+    "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
+    "next-transpile-modules": "^10.0.1",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "raw-loader": "^4.0.2",
+    "tailwindcss": "^3.4.1",
+    "url-loader": "^4.1.1"
+  }
+}

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+}
+
+html:has(.drawer-toggle:checked) {
+	overflow-y: hidden;
+	scrollbar-gutter: auto;
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background: #010001;
+	font-family: "Poppins", sans-serif;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+// LANDING PAGE FONTS [STARTS]
+@font-face {
+	font-family: "PP Formula Extrabold";
+	font-weight: 800;
+	src: url("/fonts/PPFormula-Extrabold.woff2") format("opentype");
+}
+
+@font-face {
+	font-family: "Geist Mono Semibold";
+	font-weight: 600;
+	src: url("/fonts/geist-mono-semibold.woff2") format("opentype");
+}
+
+@font-face {
+	font-family: "Helvetica Now Display";
+	font-weight: 500;
+	src: url("/fonts/HelveticaNowDisplay-Medium.ttf") format("opentype");
+}
+
+// LANDING PAGE FONTS [ENDS]
+
+@layer utilities {
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
+  .h-all-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  // FONTS [STARTS]
+	.font-pjs {
+		font-family: "Plus Jakarta Sans", sans-serif;
+	}
+
+	.font-ppf {
+		font-family: "PP Formula Extrabold";
+	}
+
+	.font-gm {
+		font-family: "Geist Mono Semibold";
+	}
+
+	.font-hnd {
+		font-family: "Helvetica Now Display";
+	}
+  // FONTS [ENDS]
+
+	// LANDING PAGE CSS [STARTS]
+	.arrowAnime {
+		:hover {
+			transform: rotate(90deg);
+		}
+	}
+
+	.canvas {
+		touch-action: auto !important;
+	}
+
+	// LANDING PAGE CSS [ENDS]
+}
