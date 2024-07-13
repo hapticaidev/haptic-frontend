@@ -17,31 +17,31 @@ export function Model(props) {
 	// Subscribe this component to the render-loop, rotate the mesh every frame
 	useFrame((state, delta) => !hovered && (ref.current.rotation.y += delta / 1.2));
 
-	// const materialProps = {
-	// 	thickness: 1.6,
-	// 	roughness: 0,
-	// 	clearcoat: 0,
-	// 	clearcoatRoughness: 1,
-	// 	transmission: 0.98,
-	// 	ior: 13,
-	// 	envMapIntensity: 1,
-	// 	color: "#ffffff",
-	// 	attenuationTint: "#c10000",
-	// 	attenuationDistance: 1,
-	// };
-
 	const materialProps = {
-		thickness: 0,
+		thickness: 1.6,
 		roughness: 0,
-		clearcoat: 1,
+		clearcoat: 0,
 		clearcoatRoughness: 1,
-		transmission: 0,
-		ior: 16,
-		envMapIntensity: 0,
+		transmission: 0.98,
+		ior: 13,
+		envMapIntensity: 1,
 		color: "#ffffff",
-		attenuationTint: "#ebebeb",
-		attenuationDistance: 0,
+		attenuationTint: "#c10000",
+		attenuationDistance: 1,
 	};
+
+	// const materialProps = {
+	// 	thickness: 0,
+	// 	roughness: 0,
+	// 	clearcoat: 1,
+	// 	clearcoatRoughness: 1,
+	// 	transmission: 0,
+	// 	ior: 16,
+	// 	envMapIntensity: 0,
+	// 	color: "#ffffff",
+	// 	attenuationTint: "#ebebeb",
+	// 	attenuationDistance: 0,
+	// };
 
 	return (
 		<group

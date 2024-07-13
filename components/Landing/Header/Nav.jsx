@@ -2,9 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { HeaderData } from "@constants";
+import { individualCodedText } from "@lib/individualCodedText";
 
 const NavItems = () => {
-	return HeaderData.map((item) => {
+	return HeaderData.map((item, index) => {
 		if (item.logo) {
 			return (
 				<Link
@@ -34,11 +35,17 @@ const NavItems = () => {
 		return (
 			<Link
 				// eslint-disable-next-line tailwindcss/no-custom-classname
-				className='font-gm flex size-fit items-center justify-center rounded-full text-center text-[1rem] font-[600] uppercase leading-5 tracking-[-0.01em] text-[#F8FDFF] duration-200 hover:scale-110'
+				className='font-gm flex size-fit items-center justify-center rounded-full text-center text-[1rem] font-[600] uppercase leading-5 tracking-[-0.01em] text-[#F8FDFF]'
 				href={item.link || "#"}
 				passHref
 				key={item.link}>
-				{item.label || ""}
+				<span
+					role='none'
+					className={`${item.class}`}
+					data-text={item.label}
+					onMouseEnter={() => individualCodedText(`.${item.class}`)}>
+					{item.label || ""}
+				</span>
 			</Link>
 		);
 	});

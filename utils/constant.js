@@ -73,11 +73,13 @@ export const HeaderData = [
 		id: 0,
 		label: "docs",
 		link: "https://hapticai.gitbook.io/hapticai",
+		class: "docs",
 	},
 	{
 		id: 1,
 		label: "twitter",
 		link: "https://x.com/Haptic_AI",
+		class: "twitter",
 	},
 	{
 		id: 2,
@@ -88,6 +90,7 @@ export const HeaderData = [
 		id: 3,
 		label: "telegram",
 		link: "https://t.me/+PuGP8s7oG58zMjA1",
+		class: "telegram",
 	},
 	{
 		id: 4,
