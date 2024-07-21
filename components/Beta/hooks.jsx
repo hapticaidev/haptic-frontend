@@ -13,7 +13,8 @@ export const useConnect = () => {
 
 	return (data) => {
 		let walletAddress = data.address;
-
+		deleteCookie(COOKIE_NAME.CHAT);
+		
 		(async () => {
 			const nonceResponse = await fetch(`/api/user/nonce/${walletAddress}`);
 			const nonce = await nonceResponse.json();

@@ -1,7 +1,7 @@
 "use client";
 
 import { Base64 } from "js-base64";
-import { getCookie, setCookie } from "cookies-next";
+import { getCookie, setCookie, deleteCookie } from "cookies-next";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -94,8 +94,15 @@ const Header = ({ toggleComponentVisibility }) => {
 	const onClickHandler = (e, item) => {
 		e.preventDefault();
 
+		const el = document.querySelector("#modal_dropdown");
+		el?.removeAttribute("open");
+
+		if(item.id === Base64.decode(modelId)) return;
+
 		setTitle(item.title);
+
 		const params = searchParams.toString();
+
 		if (params.includes(BETA_APP_QUERY_PARAMS.LLM_MODEL_ID)) {
 			const query = params.replace(modelId, Base64.encodeURI(item.id));
 			router.push(`${pathname}?${query}`);
@@ -105,8 +112,7 @@ const Header = ({ toggleComponentVisibility }) => {
 			);
 		}
 
-		const el = document.querySelector("#modal_dropdown");
-		el?.removeAttribute("open");
+		deleteCookie(COOKIE_NAME.CHAT);
 	};
 
 	const renderDropdown = () => {

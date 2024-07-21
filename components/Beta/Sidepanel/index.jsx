@@ -2,7 +2,7 @@
 
 import { Base64 } from "js-base64";
 import PropTypes from "prop-types";
-import { getCookie } from "cookies-next";
+import { getCookie, deleteCookie } from "cookies-next";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
@@ -52,10 +52,14 @@ const Sidepanel = ({ disconnected }) => {
 	};
 
 	const onParnterSelect = (id) => {
-		router.replace(`${pathname}?${BETA_APP_QUERY_PARAMS.LLM_PARTNER_ID}=${Base64.encodeURI(id)}`);
-
 		const el = document.querySelector("#modal_dropdown");
 		el?.removeAttribute("open");
+		
+		if(id === Base64.decode(partnerId)) return;
+
+		router.replace(`${pathname}?${BETA_APP_QUERY_PARAMS.LLM_PARTNER_ID}=${Base64.encodeURI(id)}`);
+
+		deleteCookie(COOKIE_NAME.CHAT);
 	};
 
 	const onActionClicked = (e, item) => {
