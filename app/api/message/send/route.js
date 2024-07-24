@@ -13,6 +13,7 @@ export async function POST(req) {
 	try {
 		const fetch1 = await fetch(`${BASE_URL}/chat/partner/${partnerId}/model/${modelId}`, {
 			method: "POST",
+			cache: 'no-cache',
 			headers: {
 				Authorization: `Bearer ${token}`,
 				"Access-Control-Allow-Credentials": "true",

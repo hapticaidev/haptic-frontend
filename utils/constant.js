@@ -191,7 +191,7 @@ export const toolkitData = {
 			title: "plug & play",
 			description:
 				"Infrastructure to generate task specific RLHF data to fine tune LLMs for specifics domains/tasks.",
-			color: "#1C1D1C",
+			color: "#1A1A1A",
 			textColor: "#F8FDFF",
 			asset: plugAndPlay,
 		},
@@ -200,7 +200,7 @@ export const toolkitData = {
 			title: "robust",
 			description:
 				"Integrity engine to score user feedback, ensuring data quality and powering a cryptoeconomic incentive mechanism.",
-			color: "#FFF2DF",
+			color: "#FEF6EB",
 			textColor: "#010001",
 			asset: robust,
 		},
@@ -208,7 +208,7 @@ export const toolkitData = {
 			id: "3",
 			title: "modular",
 			description: "input api that allows partner models to control the inputs that matter to them.",
-			color: "#BADCF5",
+			color: "#BDDCF5",
 			textColor: "#010001",
 			asset: modular,
 		},

@@ -9,6 +9,7 @@ export async function GET(req, { params }) {
   try {
     const response = await fetch(`${BASE_URL}/models/partner/${partnerId}`, {
       method: 'GET',
+      cache: 'no-cache',
       headers: {
         Authorization: `Bearer ${token}`,
         'Access-Control-Allow-Credentials': 'true',

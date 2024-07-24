@@ -5,6 +5,7 @@ export async function POST() {
   try {
     const response = await fetch(`${BASE_URL}/user/logout`, {
       method: 'POST',
+      cache: 'no-cache',
     });
     const data = await response.json();
     return NextResponse.json(data, { status: 200 });

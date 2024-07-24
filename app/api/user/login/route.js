@@ -7,6 +7,7 @@ export async function POST(req) {
   try {
     const response = await fetch(`${BASE_URL}/user/login`, {
       method: 'POST',
+      cache: 'no-cache',
       headers: {
         Authorization: `Bearer ${walletAddress}+${sign}`,
         'Access-Control-Allow-Credentials': true,

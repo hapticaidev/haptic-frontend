@@ -8,6 +8,7 @@ export async function GET(req) {
   try {
     const response = await fetch(`${BASE_URL}/partners/active`, {
       method: 'GET',
+      cache: 'no-cache',
       headers: {
         Authorization: `Bearer ${token}`,
         'Access-Control-Allow-Credentials': 'true',
