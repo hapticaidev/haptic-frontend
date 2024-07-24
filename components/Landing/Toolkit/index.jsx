@@ -66,7 +66,7 @@ const Toolkit = () => {
 						<li
 							id='card_one'
 							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='card relative z-10 mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#1C1D1C] p-[1.25rem_0.625rem] text-[#F8FDFF] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
+							className='card relative z-10 mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#1A1A1A] p-[1.25rem_0.625rem] text-[#F8FDFF] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
 							<h2
 								// eslint-disable-next-line tailwindcss/no-custom-classname
 								className='font-ppf w-auto self-start text-left text-[1.75rem] font-extrabold leading-[2.1rem] tracking-[-0.03em] text-[#F8FDFF] 2xl:w-[15.938rem] 2xl:text-[4.236rem] 2xl:leading-[4.236rem]'>
