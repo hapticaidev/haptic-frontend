@@ -115,7 +115,7 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 
 	const onSubmitHandler = (val, index) => {
 		const clone = [...chats];
-		clone[index] = { ...chats[index], submitted: true };
+		clone[index] = { ...chats[index], submitted: true, submittedIndex: val };
 		const prompt = clone[index - 1].content[0] || "";
 		(async () => {
 			try {
