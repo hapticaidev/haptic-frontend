@@ -12,7 +12,7 @@ const NavItems = () => {
 					href={item.link || "#"}
 					passHref
 					key={item.link}
-					className='relative h-[1.982rem] w-[13.316rem] duration-200 hover:scale-110'>
+					className='relative h-[1.982rem] w-[13.316rem]'>
 					<Image
 						fill
 						src={item.logo}
@@ -24,7 +24,7 @@ const NavItems = () => {
 			return (
 				<Link
 					// eslint-disable-next-line tailwindcss/no-custom-classname
-					className='font-gm flex size-fit items-center justify-center rounded-full bg-[#F8FDFF] p-4 text-center text-[1rem] font-medium uppercase leading-[1.125rem] tracking-[-0.01em] text-[#010001] duration-200 hover:scale-110'
+					className='font-gm flex size-fit items-center justify-center rounded-full bg-[#F8FDFF] p-4 text-center text-[1rem] font-medium uppercase leading-[1.125rem] tracking-[-0.01em] text-[#010001]'
 					href={item.link || "#"}
 					passHref
 					key={item.link}>
