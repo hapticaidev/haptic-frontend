@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { cookieToInitialState } from "wagmi";
 
 import { config } from "@config";
-import Connect from "@components/Beta/Connect";
 import Web3ModalProvider from "@context";
 
 export default function BetaLayout({ children }) {
@@ -12,7 +11,6 @@ export default function BetaLayout({ children }) {
 	return (
 		<Web3ModalProvider initialState={initialState}>
 			{children}
-			<Connect />
 		</Web3ModalProvider>
 	);
 }

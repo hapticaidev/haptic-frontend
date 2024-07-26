@@ -4,12 +4,16 @@ import { setCookie, deleteCookie } from "cookies-next";
 import { Base64 } from "js-base64";
 import { useSearchParams, useRouter } from "next/navigation";
 
+import { useSignMessage } from 'wagmi';
+
 import { BETA_APP_QUERY_PARAMS, COOKIE_NAME } from "@constants";
 
 export const useConnect = () => {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const partner = searchParams.get(BETA_APP_QUERY_PARAMS.LLM_PARTNER_ID) || "";
+
+	const { signMessageAsync } = useSignMessage()
 
 	return (data) => {
 		let walletAddress = data.address;
@@ -19,9 +23,9 @@ export const useConnect = () => {
 			const nonceResponse = await fetch(`/api/user/nonce/${walletAddress}`);
 			const nonce = await nonceResponse.json();
 
-			let sign = await window.ethereum.request({
-				method: "personal_sign",
-				params: [nonce.nonce, walletAddress],
+			let sign = await signMessageAsync({
+				account: walletAddress,
+				message: nonce.nonce,
 			});
 
 			setCookie(COOKIE_NAME.TOKEN, `${walletAddress}+${sign}`);
