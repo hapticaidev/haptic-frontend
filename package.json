@@ -14,8 +14,8 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.16.6",
-    "@tanstack/react-query": "^5.45.0",
-    "@web3modal/wagmi": "^5.0.2",
+    "@tanstack/react-query": "^5.51.15",
+    "@web3modal/wagmi": "^5.0.8",
     "cookies-next": "^4.2.1",
     "glsl-random": "^0.0.5",
     "gsap": "^3.12.5",
@@ -30,8 +30,8 @@
     "react-transition-group": "^4.4.5",
     "sass": "^1.76.0",
     "three": "^0.164.1",
-    "viem": "^2.14.2",
-    "wagmi": "^2.10.2"
+    "viem": "^2.18.2",
+    "wagmi": "^2.12.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.2.3",
