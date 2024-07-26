@@ -23,22 +23,22 @@ const Loader = () => {
 const Models = () => {
 	const triggerCTAClicks = ({ pageX, pageY }) => {
 		const tryApp = document.querySelector("#hero_cta_button_one");
-		const tryAppProps = tryApp.getBoundingClientRect();
+		const tryAppProps = tryApp?.getBoundingClientRect();
 		const learnMore = document.querySelector("#hero_cta_button_two");
-		const learnMoreProps = learnMore.getBoundingClientRect();
+		const learnMoreProps = learnMore?.getBoundingClientRect();
 
 		if (
-			tryAppProps.left <= pageX &&
-			pageX <= tryAppProps.right &&
-			tryAppProps.top <= pageY &&
-			pageY <= tryAppProps.bottom
+			tryAppProps?.left <= pageX &&
+			pageX <= tryAppProps?.right &&
+			tryAppProps?.top <= pageY &&
+			pageY <= tryAppProps?.bottom
 		) {
 			tryApp.click();
 		} else if (
-			learnMoreProps.left <= pageX &&
-			pageX <= learnMoreProps.right &&
-			learnMoreProps.top <= pageY &&
-			pageY <= learnMoreProps.bottom
+			learnMoreProps?.left <= pageX &&
+			pageX <= learnMoreProps?.right &&
+			learnMoreProps?.top <= pageY &&
+			pageY <= learnMoreProps?.bottom
 		) {
 			learnMore.click();
 		}
@@ -62,8 +62,8 @@ const Models = () => {
 					/>
 					<Model />
 					<Environment
-						// files='adams_place_bridge_1k.hdr'
-						files='environment.hdr'
+						files='adams_place_bridge_1k.hdr'
+						// files='environment.hdr'
 						background={false}
 					/>
 					<OrbitControls enableZoom={false} />
@@ -90,8 +90,8 @@ export const ModelBeta = () => {
 					/>
 					<Model />
 					<Environment
-						// files='adams_place_bridge_1k.hdr'
-						files='environment.hdr'
+						files='adams_place_bridge_1k.hdr'
+						// files='environment.hdr'
 						background={false}
 					/>
 					<OrbitControls />
