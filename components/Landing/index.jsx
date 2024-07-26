@@ -1,22 +1,14 @@
 "use client";
 
+import Tempus from '@darkroom.engineering/tempus'
+
 import Lenis from "lenis";
 import { useLenis } from "lenis/react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
-import { Draggable } from "gsap/dist/Draggable";
-import { Observer } from "gsap/dist/Observer";
-import { CSSPlugin } from "gsap/dist/CSSRulePlugin";
 import { Flip } from "gsap/dist/Flip";
-import { CustomEase } from "gsap/dist/CustomEase";
-import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/dist/EasePack";
-import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
-import { EaselPlugin } from "gsap/dist/EaselPlugin";
-import { PixiPlugin } from "gsap/dist/PixiPlugin";
-import { TextPlugin } from "gsap/dist/TextPlugin";
 
 import { useEffect } from "react";
 
@@ -38,33 +30,43 @@ const PAGE_PANELS = [Hero, TextFill, Toolkit, Partner];
 
 const Haptic = () => {
 	const lenis = useLenis(ScrollTrigger.update);
+
+	gsap.registerPlugin(ScrollTrigger, Flip, useGSAP);
+
 	useEffect(() => {
-		ScrollTrigger.refresh();
-		// ScrollTrigger
-		window.scrollTo(0, 0);
+		if (typeof window !== 'undefined') {
+
+			if (!lenis) return
+			lenis.on('scroll', ScrollTrigger.update)
+			lenis.emit()
+
+			// merge rafs
+			gsap.ticker.lagSmoothing(0);
+			gsap.ticker.remove(gsap.updateRoot);
+
+			Tempus.add((time) => {
+				lenis.raf(time)
+			}, 0);
+
+			Tempus.add((time) => {
+				gsap.updateRoot(time / 1000);
+			}, 0);
+		}
 
 		return () => {
-			ScrollTrigger.killAll();
-		};
-	}, [lenis]);
+			lenis.off('scroll', ScrollTrigger.update)
+		}
+	}, [lenis, ScrollTrigger.update])
 
-	gsap.registerPlugin(
-		useGSAP,
-		Flip,
-		CSSPlugin,
-		ScrollTrigger,
-		Observer,
-		ScrollToPlugin,
-		Draggable,
-		MotionPathPlugin,
-		EaselPlugin,
-		PixiPlugin,
-		TextPlugin,
-		RoughEase,
-		ExpoScaleEase,
-		SlowMo,
-		CustomEase
-	);
+	useEffect(() => {
+		if (lenis) {
+			ScrollTrigger.refresh()
+			lenis?.start()
+		}
+	}, [lenis])
+
+	ScrollTrigger.defaults({ markers: process.env.NODE_ENV === 'development' })
+
 	gsap.defaults({ ease: "none", duration: 2 });
 
 	useEffect(() => {
