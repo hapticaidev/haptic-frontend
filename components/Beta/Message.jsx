@@ -84,7 +84,7 @@ const Message = ({ message, submitFeedback }) => {
 					<Avatar isUser={isUser} />
 
 					<div className='relative w-full flex flex-col gap-[2.025rem]'>
-						{!isUser && <h4 className="font-gm pl-[0.875rem] font-medium uppercase text-[1.309rem] tracking-[-0.02em] leading-[1.701rem]">Select the most appropriate response:</h4>}
+						{!isUser && <h4 className="font-gm pl-[0.875rem] font-medium uppercase text-[1.309rem] tracking-[-0.02em] leading-[1.701rem] text-[#F8FDFF]">Select the most appropriate response:</h4>}
 						<div className='relative w-full flex flex-col md:flex-row gap-[1.563rem]'>
 							{content.map((item, index) => renderMessage(index, item))}
 						</div>

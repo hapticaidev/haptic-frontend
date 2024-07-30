@@ -51,7 +51,7 @@ const TextInput = ({ message, setMessage, sendMessage, loading, errorMessage }) 
 							data-id='root'
 							placeholder='Type your response here...'
 							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='font-hnd m-0 h-6 max-h-[12.5rem] w-full resize-none overflow-y-auto border-0 bg-transparent p-0 pl-2 pr-7 text-[1rem] font-medium leading-5 placeholder:text-[#F8FDFF]/[0.3] focus:ring-0 focus-visible:ring-0 md:pl-0'
+							className='font-hnd m-0 h-6 max-h-[12.5rem] w-full resize-none overflow-y-auto border-0 bg-transparent p-0 pl-2 pr-7 text-[1rem] font-medium leading-5 placeholder:text-[#F8FDFF]/[0.3] focus:ring-0 focus-visible:ring-0 md:pl-0 text-[#F8FDFF]'
 							onChange={(e) => setMessage(e.target.value)}
 							onKeyDown={handleKeypress}
 						/>

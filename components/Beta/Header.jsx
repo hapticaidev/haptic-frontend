@@ -150,9 +150,9 @@ const Header = ({ toggleComponentVisibility }) => {
 
 	return (
 		<div
-			className={`sticky inset-x-0 top-0 z-10  flex items-center bg-[#010001] p-3.5 ${dataLength ? "border-b border-[#F8FDFF]/[0.15]" : "min-[1081px]:hidden border-b border-[#F8FDFF]/[0.15]"}`}>
+			className={`sticky inset-x-0 top-0 z-10  flex items-center bg-[#010001] p-3.5 ${dataLength > 1 ? "border-b border-[#F8FDFF]/[0.15]" : "min-[1081px]:hidden border-b border-[#F8FDFF]/[0.15]"}`}>
 			<Menu toggleComponentVisibility={toggleComponentVisibility} />
-			{dataLength ? (
+			{dataLength > 1 ? (
 				<details
 					id='modal_dropdown'
 					className='dropdown m-3.5'>

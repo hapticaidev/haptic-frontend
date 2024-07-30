@@ -38,7 +38,7 @@ function Modal() {
 							</div>
 							<p
 								// eslint-disable-next-line tailwindcss/no-custom-classname
-								className='font-ppf text-center text-[2.618rem] font-extrabold uppercase leading-[3.142rem] tracking-[-0.03em]'>
+								className='font-ppf text-center text-[2.618rem] font-extrabold uppercase leading-[3.142rem] tracking-[-0.03em] text-[#F8FDFF]'>
 								reconnect wallet to use the app
 							</p>
 							<div
