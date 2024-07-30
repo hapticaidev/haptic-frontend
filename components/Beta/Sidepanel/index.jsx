@@ -54,8 +54,8 @@ const Sidepanel = ({ disconnected }) => {
 	const onParnterSelect = (id) => {
 		const el = document.querySelector("#modal_dropdown");
 		el?.removeAttribute("open");
-		
-		if(id === Base64.decode(partnerId)) return;
+
+		if (id === Base64.decode(partnerId)) return;
 
 		router.replace(`${pathname}?${BETA_APP_QUERY_PARAMS.LLM_PARTNER_ID}=${Base64.encodeURI(id)}`);
 
@@ -77,6 +77,11 @@ const Sidepanel = ({ disconnected }) => {
 				<div className='flex flex-col gap-[4.484rem] overflow-hidden border-b border-[#F8FDFF]/[0.15] pb-[0.393rem] pt-[2.375rem]'>
 					<SidepanelHeader />
 					<div className='flex flex-col gap-1 overflow-y-auto px-3.5'>
+						<div className="pb-5">
+							<h4 className="font-gm text-[1rem] uppercase leading-5 tracking-[-0.01em] text-[#F8FDFF]/[0.5]">
+								Model Providers
+							</h4>
+						</div>
 						{partnersData().map((item) => {
 							return (
 								<SidepanelButton

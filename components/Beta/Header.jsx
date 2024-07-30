@@ -123,7 +123,7 @@ const Header = ({ toggleComponentVisibility }) => {
 						key={item.id}
 						onClick={(e) => onClickHandler(e, item)}
 						// eslint-disable-next-line tailwindcss/no-custom-classname
-						className={`font-gm w-max rounded-md p-[0.813rem] text-[1.125rem] font-[700] uppercase leading-[1.35rem] tracking-[-0.03em] ${modelId === Base64.encodeURI(item.id) ? "bg-[#F8FDFF] text-[#010001] hover:bg-[#F8FDFF]/[0.85]" : "text-[#F8FDFF]/[0.5]  hover:bg-[#F8FDFF]/[0.05]"}`}>
+						className={`font-gm w-full text-left rounded-md p-[0.813rem] text-[1.125rem] font-[700] uppercase leading-[1.35rem] tracking-[-0.03em] ${modelId === Base64.encodeURI(item.id) ? "bg-[#F8FDFF] text-[#010001] hover:bg-[#F8FDFF]/[0.88]" : "text-[#F8FDFF]/[0.5]  hover:bg-[#F8FDFF]/[0.12]"}`}>
 						{item.title}
 					</button>
 				))}
