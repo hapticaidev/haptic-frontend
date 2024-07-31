@@ -70,6 +70,8 @@ const Sidepanel = ({ disconnected }) => {
 		el?.removeAttribute("open");
 	};
 
+	const data = partnersData()
+
 	return (
 		// eslint-disable-next-line tailwindcss/no-custom-classname
 		<div className='scrollbar-trigger flex size-full flex-1 items-start border-r border-[#F8FDFF]/[0.15] bg-[#010001] p-0 uppercase'>
@@ -77,12 +79,12 @@ const Sidepanel = ({ disconnected }) => {
 				<div className='flex flex-col gap-[4.484rem] overflow-hidden border-b border-[#F8FDFF]/[0.15] pb-[0.393rem] pt-[2.375rem]'>
 					<SidepanelHeader />
 					<div className='flex flex-col gap-1 overflow-y-auto px-3.5'>
-						<div className="pb-5">
+						{data?.length > 0 && <div className="pb-5">
 							<h4 className="font-gm text-[1rem] uppercase leading-5 tracking-[-0.01em] text-[#F8FDFF]/[0.5]">
 								Model Providers
 							</h4>
-						</div>
-						{partnersData().map((item) => {
+						</div>}
+						{data.map((item) => {
 							return (
 								<SidepanelButton
 									key={item.id}

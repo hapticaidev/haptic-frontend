@@ -137,7 +137,7 @@ const Header = ({ toggleComponentVisibility }) => {
 				// eslint-disable-next-line tailwindcss/no-custom-classname
 				className='font-gm btn mb-2 flex h-max min-w-[16.063rem] gap-4 justify-between bg-[#131313] px-2.5 py-[1.125rem] text-[1.125rem] font-[700] uppercase leading-[1.35rem] tracking-[-0.03em] text-[#F8FDFF] hover:bg-[#131313]/[0.05]'>
 				<div>{title}</div>
-				<div className='relative w-3.5'>
+				<div className={`relative w-3.5 transition ease-in-out delay-150 ${dataLength > 1 ? 'visible' : 'invisible select-none'}`}>
 					<Image
 						src={arrow}
 						alt='arrow'
@@ -150,14 +150,14 @@ const Header = ({ toggleComponentVisibility }) => {
 
 	return (
 		<div
-			className={`sticky inset-x-0 top-0 z-10  flex items-center bg-[#010001] p-3.5 ${dataLength > 1 ? "border-b border-[#F8FDFF]/[0.15]" : "min-[1081px]:hidden border-b border-[#F8FDFF]/[0.15]"}`}>
+			className={`sticky inset-x-0 top-0 z-10  flex items-center bg-[#010001] p-3.5 ${dataLength ? "border-b border-[#F8FDFF]/[0.15]" : "min-[1081px]:hidden border-b border-[#F8FDFF]/[0.15]"}`}>
 			<Menu toggleComponentVisibility={toggleComponentVisibility} />
-			{dataLength > 1 ? (
+			{dataLength ? (
 				<details
 					id='modal_dropdown'
 					className='dropdown m-3.5'>
 					{renderTitle()}
-					{renderDropdown()}
+					{dataLength > 1 && renderDropdown()}
 				</details>
 			) : null}
 		</div>
