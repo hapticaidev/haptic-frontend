@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Canvas, extend } from "@react-three/fiber";
 import { OrbitControls, Environment, PerspectiveCamera, Html, useProgress, } from "@react-three/drei";
 
-import { Model } from "./New";
+import { Model } from "./Logo";
 
 extend(THREE);
 
@@ -45,7 +45,7 @@ const Models = () => {
 	};
 
 	return (
-		<div className='w-full h-screen sticky'>
+		<div className='w-full h-screen'>
 			<Canvas
 				// eslint-disable-next-line tailwindcss/no-custom-classname
 				className='canvas'
@@ -59,7 +59,7 @@ const Models = () => {
 						fov={40}
 						position={[0, 0, 1]}
 					/>
-					<Model />
+					<Model scrolling={false} />
 					<Environment
 						files='adams_place_bridge_1k.hdr'
 						background={false}
