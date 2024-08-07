@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Canvas, extend } from "@react-three/fiber";
 import { OrbitControls, Environment, PerspectiveCamera, Html, useProgress, } from "@react-three/drei";
 
-import { Model } from "./Logo";
+import { Model, SplashModel } from "./Logo";
 
 extend(THREE);
 
@@ -86,7 +86,7 @@ export const ModelBeta = () => {
 						fov={40}
 						position={[0, 0, 2]}
 					/>
-					<Model />
+					<SplashModel />
 					<Environment
 						files='adams_place_bridge_1k.hdr'
 						// files='environment.hdr'
