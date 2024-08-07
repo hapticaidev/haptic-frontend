@@ -57,12 +57,11 @@ const Models = () => {
 					<PerspectiveCamera
 						makeDefault
 						fov={40}
-						position={[0, 0, 2]}
+						position={[0, 0, 1]}
 					/>
 					<Model />
 					<Environment
 						files='adams_place_bridge_1k.hdr'
-						// files='environment.hdr'
 						background={false}
 					/>
 					<OrbitControls enableZoom={false} autoRotate={false} enableRotate={false} enablePan={false} />
