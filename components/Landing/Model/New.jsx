@@ -75,28 +75,13 @@ export function Model(props) {
 
     const { camera, pointer } = useThree()
     const vec = new THREE.Vector3()
-    useFrame(() => camera.position.lerp(vec.set(pointer.x * 4, pointer.y * 2, camera.position.z), 0.02))
+    useFrame(() => camera.position.lerp(vec.set(pointer.x * -8, pointer.y * 2, camera.position.z), 0.02))
 
-    const [onHover, setOnHover] = useState(false);
     const [onClick, handleOnClick] = useState(false);
-
-    const materialProps = {
-        thickness: 1.6,
-        roughness: 0,
-        clearcoat: 0,
-        clearcoatRoughness: 1,
-        transmission: 0.98,
-        ior: 13,
-        envMapIntensity: 1,
-        color: "#ffffff",
-        attenuationTint: "#c10000",
-        attenuationDistance: 1,
-    };
 
     return (
         <group ref={ref} {...props} dispose={null} onClick={(event) => handleOnClick(!onClick)}
-            onPointerOver={(event) => setOnHover(true)}
-            onPointerOut={(event) => setOnHover(false)}>
+        >
             <mesh
                 castShadow
                 receiveShadow
@@ -104,7 +89,6 @@ export function Model(props) {
                 material={materials['Translucent Plastic HOM']}
                 position={[0, 0, -1.766]}
                 rotation={[0, 0, Math.PI]}
-                {...materialProps}
                 scale={5.065}>
                 <group rotation={[Math.PI / 2, -Math.PI / 2, 0]} scale={0.313}>
                     <mesh

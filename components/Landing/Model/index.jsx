@@ -2,9 +2,9 @@
 import * as THREE from "three";
 import { Suspense } from "react";
 import { Canvas, extend } from "@react-three/fiber";
-import { OrbitControls, Environment, PerspectiveCamera, Html, useProgress } from "@react-three/drei";
+import { OrbitControls, Environment, PerspectiveCamera, Html, useProgress, } from "@react-three/drei";
 
-import { Model } from "./Logo";
+import { Model } from "./New";
 
 extend(THREE);
 
@@ -45,20 +45,19 @@ const Models = () => {
 	};
 
 	return (
-		// <div className='absolute right-0 top-6 z-10 h-[887px] w-full lg:h-[80vh] lg:w-3/5'>
-		<div className='absolute right-0 top-4 z-10 h-[50rem] w-full sm:h-[55.438rem] md:h-screen xl:w-2/5'>
+		<div className='w-full h-screen sticky'>
 			<Canvas
 				// eslint-disable-next-line tailwindcss/no-custom-classname
 				className='canvas'
 				dpr={[1, 2]}
 				eventSource={typeof document !== "undefined" && document.getElementById("_next")}
 				onClick={triggerCTAClicks}
-				camera={{ position: [0, 0, 2.5] }}>
+				camera={{ position: [0, 0, 15], near: 5, far: 40 }}>
 				<Suspense fallback={<Loader />}>
 					<PerspectiveCamera
 						makeDefault
 						fov={40}
-						position={[0, 0, 6]}
+						position={[0, 0, 2]}
 					/>
 					<Model />
 					<Environment
@@ -66,7 +65,7 @@ const Models = () => {
 						// files='environment.hdr'
 						background={false}
 					/>
-					<OrbitControls enableZoom={false} />
+					<OrbitControls enableZoom={false} autoRotate={false} enableRotate={false} enablePan={false} />
 				</Suspense>
 			</Canvas>
 		</div>
@@ -86,7 +85,7 @@ export const ModelBeta = () => {
 					<PerspectiveCamera
 						makeDefault
 						fov={40}
-						position={[0, 0, 6]}
+						position={[0, 0, 2]}
 					/>
 					<Model />
 					<Environment
