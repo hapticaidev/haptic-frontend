@@ -105,13 +105,13 @@ const Haptic = () => {
 	return (
 		<div className='bg-[#010001]'>
 			<Header>
-				<main className='z-[1] w-full bg-[#010001]'>
-					<div className='relative  w-full'>
-						<div className='left-0 right-0 fixed z-10'>
-							<Model />
-						</div>
+				<main className='z-[1] bg-[#010001]'>
+					<div className='left-0 right-0 fixed z-10'>
+						<Model />
 					</div>
+					<div>
 					{PAGE_PANELS.map(renderSection)}
+					</div>
 				</main>
 				<EmptySection />
 				<Footer />
