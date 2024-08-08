@@ -8,7 +8,7 @@ import { LinkArrow } from "@components/Icons";
 const SidebarContent = () => {
 	return (
 		<div className='menu size-full bg-[#F8FDFF] p-[4.75rem_1rem_1rem] text-base-content'>
-			<div className='mb-[9.688rem] mt-[10.438rem] flex size-full flex-col justify-between gap-4'>
+			<div className='mb-[calc(9.688rem-15lvh)] mt-[10.438rem] flex size-full flex-col justify-between gap-4'>
 				<div className='mb-auto flex w-full flex-col items-start gap-7'>
 					{HeaderMobileData.links.map((item) => {
 						return (
