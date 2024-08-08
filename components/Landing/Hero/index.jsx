@@ -9,10 +9,10 @@ const HeroBanner = () => {
 		<div className='h-all-screen flex w-full flex-col items-center justify-center px-3.5 uppercase md:px-9'>
 			<div
 				// eslint-disable-next-line tailwindcss/no-custom-classname
-				className='font-ppf mb-auto mt-[10.214rem] w-full min-w-[21.188rem] select-none text-left text-[3.499rem] font-extrabold leading-[3.499rem] tracking-[-0.03em] text-[#F8FDFF] md:mt-[11.813rem] md:text-[6.785rem] md:leading-[6.785rem] lg:min-w-[60.75rem] lg:text-[10.031rem] lg:leading-[9.529rem] xl:my-0 2xl:mb-auto 2xl:mt-[10.214rem]'>
+				className='font-ppf mb-auto mt-[10.214rem] w-full min-w-[21.188rem] select-none text-left text-[3.499rem] font-extrabold leading-[3.499rem] tracking-[-0.03em] text-[#F8FDFF] md:mt-[11.813rem] md:text-[6.785rem] md:leading-[6.785rem] lg:min-w-[60.75rem] lg:text-[10.031rem] lg:leading-[9.529rem] 2xl:mb-auto 2xl:mt-[10.214rem]'>
 				{HTMLReactParser(HeroBannerData.title)}
 			</div>
-			<div className='mb-[3.813rem] ml-auto flex w-full flex-col items-end xl:mb-0 2xl:mb-[3.813rem]'>
+			<div className='mb-[3.813rem] ml-auto flex w-full flex-col items-end 2xl:mb-[3.813rem]'>
 				<div
 					// eslint-disable-next-line tailwindcss/no-custom-classname
 					className='font-gm w-full select-none text-justify text-[0.875rem] font-[600] leading-[1.094rem] tracking-[-0.02em] md:w-[22.688rem] lg:w-[29.313rem] lg:text-[1rem] lg:leading-5'>
