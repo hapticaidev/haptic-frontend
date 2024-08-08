@@ -14,10 +14,12 @@ const SidebarContent = () => {
 						return (
 							<Link
 								// eslint-disable-next-line tailwindcss/no-custom-classname
-								className='font-ppf flex w-fit items-center justify-center text-left text-[3.414rem] font-[800] uppercase leading-[3.414rem] tracking-[-0.03em] text-[#1C1D1C] duration-200 hover:scale-90'
+								className={`${item.class} font-ppf flex w-fit items-center justify-center text-left text-[3.414rem] font-[800] uppercase leading-[3.414rem] tracking-[-0.03em] text-[#1C1D1C]`}
 								href={item.link || "#"}
 								passHref
-								key={item.id}>
+								key={item.id}
+								data-text={item.label}
+								onMouseEnter={() => individualCodedText(`.${item.class}`)}>
 								{item.label || ""}
 							</Link>
 						);

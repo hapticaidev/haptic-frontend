@@ -134,11 +134,13 @@ export const HeaderMobileData = {
 			id: 0,
 			label: "docs",
 			link: "https://hapticai.gitbook.io/hapticai",
+			class: "docs",
 		},
 		{
 			id: 2,
 			label: "open beta",
 			link: "/beta",
+			class: "beta",
 		},
 	],
 	socialTitle: "socials",
