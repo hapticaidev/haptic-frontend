@@ -8,10 +8,10 @@ const Tag = ({ title, handleTagClick, checked }) => {
 			onClick={() => handleTagClick(title)}
 			className={`flex size-fit cursor-pointer items-center space-x-2 rounded-full border-[0.061rem] border-[#010001] transition-all duration-100 ease-in md:border ${
 				checked ? "bg-[#010001] text-white" : "bg-transparent text-[#010001]  hover:bg-[rgba(0,0,0,0.2)]"
-				} p-[0.619rem] sm:p-[0.967rem] `}>
+				} py-[0.619rem] px-[0.967rem]`}>
 			<div
 				// eslint-disable-next-line tailwindcss/no-custom-classname
-				className='font-gm text-center text-[1rem] sm:text-[1.125rem] font-bold leading-[1.35rem] tracking-[-0.03em]'>
+				className='font-gm text-center text-[1rem] leading-5 tracking-[-0.02em] font-[600] text-[#010001]'>
 				{title}
 			</div>
 		</div>
