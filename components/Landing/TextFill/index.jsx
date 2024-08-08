@@ -37,7 +37,7 @@ const TextFill = () => {
 		return (
 			<p
 				// eslint-disable-next-line tailwindcss/no-custom-classname
-				className='font-ppf relative inline-flex w-full text-left text-[1.299rem] font-extrabold leading-[2.534rem] tracking-[-0.03em] sm:text-[2.112rem] md:text-[2.558rem] md:leading-[3.529rem] lg:text-[3.483rem] lg:leading-[5.029rem] xl:text-[4.5rem] xl:leading-[6.029rem] 2xl:text-[5.545rem] 2xl:leading-[6.654rem]'>
+				className='font-ppf relative inline-flex w-full text-left text-[1.299rem] min-[400px]:text-[1.5rem] min-[500px]:text-[1.9rem] font-extrabold leading-[2.534rem] tracking-[-0.03em] sm:text-[2.112rem] md:text-[2.558rem] md:leading-[3.529rem] lg:text-[3.483rem] lg:leading-[5.029rem] xl:text-[4.5rem] xl:leading-[6.029rem] 2xl:text-[5.545rem] 2xl:leading-[6.654rem]'>
 				<span className='overflow-hidden text-nowrap text-[#F8FDFF80]'>{text}</span>
 				<span
 					id={id}
