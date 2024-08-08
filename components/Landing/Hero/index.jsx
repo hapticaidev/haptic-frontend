@@ -15,7 +15,7 @@ const HeroBanner = () => {
 			<div className='mb-[3.813rem] ml-auto flex w-full flex-col items-end 2xl:mb-[3.813rem]'>
 				<div
 					// eslint-disable-next-line tailwindcss/no-custom-classname
-					className='font-gm w-full select-none text-justify text-[0.875rem] font-[600] leading-[1.094rem] tracking-[-0.02em] md:w-[22.688rem] lg:w-[29.313rem] lg:text-[1rem] lg:leading-5'>
+					className='font-gm w-full select-none text-justify text-[0.875rem] font-[600] leading-[1.094rem] tracking-[-0.02em] md:w-[22.688rem] lg:w-[29.313rem] lg:text-[1rem] lg:leading-5 text-[#F8FDFF]/[0.5]'>
 					{HTMLReactParser(HeroBannerData.desc)}
 				</div>
 				<div className='mt-[2.188rem] flex gap-[1.563rem]'>
