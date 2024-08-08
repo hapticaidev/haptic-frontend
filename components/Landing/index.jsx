@@ -67,7 +67,7 @@ const Haptic = () => {
 
 	ScrollTrigger.defaults({ markers: process.env.NODE_ENV === 'development' })
 
-	gsap.defaults({ ease: "none", duration: 2 });
+	gsap.defaults({ ease: "power1.out", duration: 2 });
 
 	useEffect(() => {
 		// Initialize Lenis for smooth scrolling
