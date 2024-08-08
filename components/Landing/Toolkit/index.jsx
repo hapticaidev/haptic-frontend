@@ -74,7 +74,7 @@ const Toolkit = () => {
 							</h2>
 							<p
 								// eslint-disable-next-line tailwindcss/no-custom-classname
-								className='font-gm mb-auto mt-[1.538rem] text-left text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#F8FDFF] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
+								className='font-gm mb-auto mt-[1.538rem] text-justify text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#F8FDFF] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
 								{toolkitData.cards[0].description}
 							</p>
 							{renderVideo(0)}
@@ -90,7 +90,7 @@ const Toolkit = () => {
 							</h2>
 							<p
 								// eslint-disable-next-line tailwindcss/no-custom-classname
-								className='font-gm mb-auto mt-[1.538rem] text-left text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#010001] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
+								className='font-gm mb-auto mt-[1.538rem] text-justify text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#010001] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
 								{toolkitData.cards[1].description}
 							</p>
 							{renderVideo(1)}
@@ -106,7 +106,7 @@ const Toolkit = () => {
 							</h2>
 							<p
 								// eslint-disable-next-line tailwindcss/no-custom-classname
-								className='font-gm mb-auto mt-[2.038rem] text-left text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#010001] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
+								className='font-gm mb-auto mt-[2.038rem] text-justify text-[0.813rem] font-medium leading-[0.975rem] tracking-[-0.02em] text-[#010001] 2xl:mt-9 2xl:text-[1.309rem] 2xl:leading-[1.571rem] 2xl:tracking-[-0.01em]'>
 								{toolkitData.cards[2].description}
 							</p>
 							{renderVideo(2)}

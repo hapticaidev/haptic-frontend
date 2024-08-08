@@ -7,7 +7,7 @@ import { useGLTF, } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber';
 
 export function Model(props) {
-    const { nodes, materials } = useGLTF('/models/logo.glb')
+    const { nodes, materials } = useGLTF('/models/logo.glb', true)
     const ref = useRef();
 
     const { camera, size } = useThree()
