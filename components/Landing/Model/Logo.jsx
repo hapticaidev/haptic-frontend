@@ -23,9 +23,9 @@ export function Model(props) {
         } else if (size.width >= 1024 && size.width < 1360) {
             camera.position.lerp(vec.set(1, 0, 2), 0.02)
         } else if (size.width >= 768 && size.width < 1024) {
-            camera.position.lerp(vec.set(0, -0.05, 1.5), 0.02)
+            camera.position.lerp(vec.set(0, -0.01, 1), 0.02)
         } else if (size.width < 768) {
-            camera.position.lerp(vec.set(0, -0.05, 1.5), 0.02)
+            camera.position.lerp(vec.set(0, -0.01, 0.5), 0.02)
         }
 
     })
