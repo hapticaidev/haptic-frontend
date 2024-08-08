@@ -21,16 +21,16 @@ const TextFill = () => {
 		});
 		tl.to("#two", {
 			width: "100%",
-		});
+		}, "-=95%");
 		tl.to("#three", {
 			width: "100%",
-		});
+		}, "-=95%");
 		tl.to("#four", {
 			width: "100%",
-		});
+		}, "-=95%");
 		tl.to("#five", {
 			width: "100%",
-		});
+		}, "-=95%");
 	});
 
 	const renderLine = (text, id) => {
@@ -49,7 +49,7 @@ const TextFill = () => {
 	};
 
 	return (
-		<div className='relative h-[300vh] w-full px-3.5 pb-[100vh] md:px-9'>
+		<div className='relative h-[220lvh] w-full px-3.5 md:px-9'>
 			<div
 				id='quote'
 				className='flex h-screen w-full flex-col justify-center uppercase'>
