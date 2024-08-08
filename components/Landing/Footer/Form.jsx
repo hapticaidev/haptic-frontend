@@ -64,7 +64,7 @@ const FooterForm = () => {
 						maxLength={50}
 						value={name}
 						onChange={(e) => setName(e.target.value)}
-						className='border-b border-[#010001]/50 bg-transparent py-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'
+						className='border-b rounded-none border-[#010001]/[0.50] bg-transparent py-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'
 					/>
 					<input
 						type='email'
@@ -73,7 +73,7 @@ const FooterForm = () => {
 						maxLength={80}
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						className='border-b border-[#010001]/50 bg-transparent py-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'
+						className='border-b rounded-none border-[#010001]/[0.50] bg-transparent py-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'
 					/>
 					<div className='flex flex-col gap-4'>
 						<span className='text-[1rem] leading-5 tracking-[-0.01em]'>Nature of communication</span>
@@ -96,7 +96,7 @@ const FooterForm = () => {
 						value={description}
 						placeholder='describe'
 						onChange={(e) => setDescription(e.target.value)}
-						className='h-[10.625rem] resize-none border-b border-[#010001]/50 bg-transparent pt-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'></textarea>
+						className='h-[10.625rem] rounded-none resize-none border-b border-[#010001]/[0.50] bg-transparent pt-[1.125rem] text-[1rem] leading-5 tracking-[-0.01em] outline-none placeholder:uppercase placeholder:text-[#010001]'></textarea>
 
 					<button
 						type='submit'
