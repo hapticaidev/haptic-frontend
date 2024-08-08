@@ -92,7 +92,7 @@ export const ModelBeta = () => {
 						// files='environment.hdr'
 						background={false}
 					/>
-					<OrbitControls />
+					<OrbitControls enableZoom={false} autoRotate={false} enableRotate={false} enablePan={false} />
 				</Suspense>
 			</Canvas>
 		</div>

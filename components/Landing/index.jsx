@@ -106,7 +106,7 @@ const Haptic = () => {
 		<div className='bg-[#010001]'>
 			<Header>
 				<main className='z-[1] bg-[#010001]'>
-					<div className='left-0 right-0 fixed z-10'>
+					<div className='left-0 right-0 absolute z-10'>
 						<Model />
 					</div>
 					<div>
