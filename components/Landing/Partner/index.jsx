@@ -27,7 +27,7 @@ const Partner = () => {
 		<div className='flex w-full flex-col items-center justify-center px-3.5 uppercase md:px-9 lg:pt-[11.188rem] bg-[#010001] pt-[10.214rem] md:pt-[15.813rem]'>
 			<div
 				// eslint-disable-next-line tailwindcss/no-custom-classname
-			className='font-ppf md:text-[2.618rem] text-[#F8FDFF] w-full max-w-[22.688rem] self-start text-left text-[1.75rem] font-extrabold leading-[2.063rem] tracking-[-0.03em] md:max-w-[87.5rem] lg:text-[2.618rem] lg:leading-[3.142rem]'>
+				className='font-ppf text-[#F8FDFF] mb-[2.119rem] mt-[0.779rem] max-w-[22.688rem] text-center text-[1.75rem] font-extrabold leading-[2.063rem] tracking-[-0.03em] lg:mb-[4.25rem] lg:mt-[1.563rem] lg:max-w-[43.75rem] lg:text-[2.618rem] lg:leading-[3.142rem]'>
 				{partenersData.title}
 			</div>
 			<ul className='mt-5 flex flex-wrap justify-center gap-[3.043rem] lg:mt-[4.313rem] lg:gap-24'>

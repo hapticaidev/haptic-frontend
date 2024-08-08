@@ -89,17 +89,6 @@ const Haptic = () => {
 		};
 	}, []);
 
-	const renderSection = (Component, index) => {
-		return (
-			<section
-				key={index}
-				// eslint-disable-next-line tailwindcss/no-custom-classname
-				className='sticky inset-x-0 top-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
-				<Component />
-			</section>
-		);
-	};
-
 	return (
 		<div className='bg-[#010001]'>
 			<Header>
