@@ -64,9 +64,6 @@ export const WalletData = [
 	},
 ];
 
-// FEEDBACK FORM ALL TAGS
-export const FeedbackTagsData = ["Offensive", "Incorrect", "Tag 1", "Tag 2", "Tag 3"];
-
 // LANDING PAGE NAVBAR DATA
 export const HeaderData = [
 	{

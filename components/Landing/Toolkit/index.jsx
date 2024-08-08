@@ -16,7 +16,7 @@ const Toolkit = () => {
 			const { x, y } = card.getBoundingClientRect();
 
 			gsap.from(card, {
-				duration: 5,
+				duration: 1,
 				ease: "power4.in",
 				x: () => plugAndPlay.x - x,
 				y: () => {
@@ -28,7 +28,7 @@ const Toolkit = () => {
 					trigger: card,
 					scrub: true,
 				},
-			});
+			}, "-=50%");
 		});
 	});
 
@@ -49,14 +49,14 @@ const Toolkit = () => {
 	};
 
 	return (
-		<div className='relative h-[150rem] w-full px-3.5 md:px-9'>
+		<div className='relative h-[155rem] md:h-[170rem] min-[830px]:h-[160rem] lg:h-[160rem] min-[1243px]:h-[200lvh] 2xl:h-[220lvh]  w-full px-3.5 md:px-9'>
 			<div
 				id='toolkit'
-				className='flex h-screen w-full flex-col justify-center gap-[3.25rem] pb-[3.938rem] pt-[5.563rem] uppercase md:gap-[4.563rem] md:pb-[5.563rem] md:pt-[11.188rem]'>
+				className='flex w-full flex-col justify-center self-center gap-[3.25rem] pb-[3.938rem] uppercase md:gap-[4.563rem] md:pb-[5.563rem] mt-[10.214rem] md:mt-[15.813rem]'>
 				<div
 					id='toolkit_title'
 					// eslint-disable-next-line tailwindcss/no-custom-classname
-					className='font-ppf text-[#F8FDFF] max-w-[22.688rem] text-left text-[1.75rem] font-extrabold leading-[2.1rem] tracking-[-0.03em] lg:max-w-[87.5rem] lg:text-[4.891rem] lg:leading-[4.06rem]'>
+					className='font-ppf leading-[2.063rem] md:text-[2.618rem] lg:leading-[3.142rem] text-[#F8FDFF] max-w-[22.688rem] text-left text-[1.75rem] font-extrabold tracking-[-0.03em] md:max-w-[87.5rem] lg:text-[4.891rem] '>
 					{toolkitData.title}
 				</div>
 				<div className='relative h-fit min-h-full'>
@@ -66,7 +66,7 @@ const Toolkit = () => {
 						<li
 							id='card_one'
 							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='card relative z-10 mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#1A1A1A] p-[1.25rem_0.625rem] text-[#F8FDFF] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
+							className='card relative mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#1A1A1A] p-[1.25rem_0.625rem] text-[#F8FDFF] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
 							<h2
 								// eslint-disable-next-line tailwindcss/no-custom-classname
 								className='font-ppf w-auto self-start text-left text-[1.75rem] font-extrabold leading-[2.1rem] tracking-[-0.03em] text-[#F8FDFF] 2xl:w-[15.938rem] 2xl:text-[4.236rem] 2xl:leading-[4.236rem]'>
@@ -82,7 +82,7 @@ const Toolkit = () => {
 						<li
 							id='card_two'
 							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='card relative z-[11] mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#FFF2DF] p-[1.25rem_0.625rem] text-[#010001] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
+							className='card relative mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#FFF2DF] p-[1.25rem_0.625rem] text-[#010001] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
 							<h2
 								// eslint-disable-next-line tailwindcss/no-custom-classname
 								className='font-ppf self-start text-left text-[1.75rem] font-extrabold leading-[2.1rem] tracking-[-0.03em] text-[#010001] 2xl:text-[4.236rem] 2xl:leading-[4.236rem]'>
@@ -98,7 +98,7 @@ const Toolkit = () => {
 						<li
 							id='card_three'
 							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='card relative z-[12] mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#BADCF5] p-[1.25rem_0.625rem] text-[#010001] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
+							className='card relative mx-auto flex h-[22.938rem] w-[22.625rem] min-w-[22.625rem] flex-col rounded-[0.743rem] bg-[#BADCF5] p-[1.25rem_0.625rem] text-[#010001] 2xl:h-[41.875rem] 2xl:w-[28.542rem] 2xl:rounded-[2.25rem] 2xl:p-[2.313rem_1.688rem]'>
 							<h2
 								// eslint-disable-next-line tailwindcss/no-custom-classname
 								className='font-ppf self-start text-left text-[1.75rem] font-extrabold leading-[2.1rem] tracking-[-0.03em] text-[#010001] 2xl:text-[4.236rem] 2xl:leading-[4.236rem]'>

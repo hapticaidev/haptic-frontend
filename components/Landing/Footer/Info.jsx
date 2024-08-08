@@ -19,7 +19,7 @@ const FooterInfo = () => {
 					</h4>
 					<p
 						// eslint-disable-next-line tailwindcss/no-custom-classname
-						className='font-gm max-w-[22.625rem] text-justify text-[0.875rem] font-[600] leading-[1.094rem] tracking-[-0.01em] text-[#010001] lg:max-w-[32.375rem] lg:text-[1rem] lg:leading-5'>
+						className='font-gm max-w-[22.625rem] md:text-justify text-[0.875rem] font-[600] leading-[1.094rem] tracking-[-0.01em] text-[#010001] lg:max-w-[32.375rem] lg:text-[1rem] lg:leading-5'>
 						{FooterData.subtitle}
 					</p>
 					<ul className='mt-[0.313rem] flex flex-col gap-1.5 lg:mt-[1.563rem] lg:gap-1'>
