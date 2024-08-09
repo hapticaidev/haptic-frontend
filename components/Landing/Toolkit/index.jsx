@@ -62,7 +62,7 @@ const Toolkit = () => {
 				<div
 					id='toolkit_title'
 					// eslint-disable-next-line tailwindcss/no-custom-classname
-					className='font-ppf leading-[2.063rem] md:text-[2.618rem] lg:leading-[3.142rem] text-[#F8FDFF] max-w-[22.688rem] text-left text-[1.75rem] font-extrabold tracking-[-0.03em] md:max-w-[87.5rem] lg:text-[4.891rem] '>
+					className='font-ppf leading-[2.063rem] md:text-[2.75rem] lg:leading-[3.142rem] text-[#F8FDFF] max-w-[22.688rem] text-left text-[1.75rem] font-extrabold tracking-[-0.03em] md:max-w-[87.5rem] lg:text-[4.891rem] '>
 					{toolkitData.title}
 				</div>
 				<div className='relative h-fit min-h-full'>
