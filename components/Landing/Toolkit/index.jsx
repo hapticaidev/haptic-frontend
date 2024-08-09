@@ -55,7 +55,7 @@ const Toolkit = () => {
 	};
 
 	return (
-		<div className='relative h-fit md:h-[170rem] min-[830px]:h-[160rem] lg:h-[160rem] min-[1243px]:h-[200lvh] 2xl:h-[230lvh]  w-full px-3.5 md:px-9'>
+		<div className='relative h-fit md:h-[180rem] min-[830px]:h-[160rem] lg:h-[160rem] min-[1243px]:h-[120rem] 2xl:h-[150rem]  w-full px-3.5 md:px-9'>
 			<div
 				id='toolkit'
 				className='flex w-full flex-col justify-center self-center gap-[3.25rem] pb-[3.938rem] uppercase md:gap-[4.563rem] md:pb-[5.563rem] mt-[10.214rem] md:mt-[15.813rem]'>
