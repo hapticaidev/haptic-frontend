@@ -96,24 +96,22 @@ const Haptic = () => {
 					<div className='left-0 right-0 absolute z-10'>
 						<Model />
 					</div>
-					<div>
-						<Hero />
-						<section
-							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='sticky inset-x-0 top-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
-							<TextFill />
-						</section>
-						<section
-							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='sticky inset-x-0 md:top-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
-							<Toolkit />
-						</section>
-						<section
-							// eslint-disable-next-line tailwindcss/no-custom-classname
-							className='sticky inset-x-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
-							<Partner />
-						</section>
-					</div>
+					<Hero />
+					<section
+						// eslint-disable-next-line tailwindcss/no-custom-classname
+						className='sticky inset-x-0 top-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
+						<TextFill />
+					</section>
+					<section
+					// eslint-disable-next-line tailwindcss/no-custom-classname
+						className='sticky inset-x-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
+						<Toolkit />
+					</section>
+					<section
+					// eslint-disable-next-line tailwindcss/no-custom-classname
+						className='sticky inset-x-0 box-border flex h-fit min-h-screen w-full items-center justify-center bg-[#010001] '>
+						<Partner />
+					</section>
 				</main>
 				<EmptySection />
 				<Footer />

@@ -1,41 +1,41 @@
-import gsap from "gsap";
+// import gsap from "gsap";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 
 import { toolkitData } from "@constants";
 
 const Toolkit = () => {
-	useGSAP(() => {
-		// create a timeline
-		let tl = gsap.timeline();
-		let mm = gsap.matchMedia();
+	// useGSAP(() => {
+	// 	// create a timeline
+	// 	let tl = gsap.timeline();
+	// 	let mm = gsap.matchMedia();
 
-		mm.add("(min-width: 640px)", () => {
-			const cards = gsap.utils.toArray(".card");
+	// 	mm.add("(min-width: 640px)", () => {
+	// 		const cards = gsap.utils.toArray(".card");
 
-			cards.reverse().forEach((card, index) => {
-				const plugAndPlay = cards[2].getBoundingClientRect();
-				const { x, y } = card.getBoundingClientRect();
+	// 		cards.reverse().forEach((card, index) => {
+	// 			const plugAndPlay = cards[2].getBoundingClientRect();
+	// 			const { x, y } = card.getBoundingClientRect();
 
-				gsap.from(card, {
-					duration: 1,
-					ease: "power4.in",
-					x: () => plugAndPlay.x - x,
-					y: () => {
-						const yAxis = plugAndPlay.y - y;
+	// 			gsap.from(card, {
+	// 				duration: 1,
+	// 				ease: "power4.in",
+	// 				x: () => plugAndPlay.x - x,
+	// 				y: () => {
+	// 					const yAxis = plugAndPlay.y - y;
 
-						return index + 1 !== cards.length ? yAxis + plugAndPlay.height / (6 * (index + 1)) : 0;
-					},
-					scrollTrigger: {
-						trigger: card,
-						scrub: true,
-					},
-				}, "-=50%");
-			});
-		})
+	// 					return index + 1 !== cards.length ? yAxis + plugAndPlay.height / (6 * (index + 1)) : 0;
+	// 				},
+	// 				scrollTrigger: {
+	// 					trigger: card,
+	// 					scrub: true,
+	// 				},
+	// 			}, "-=50%");
+	// 		});
+	// 	})
 
 
-	});
+	// });
 
 	const renderVideo = (index) => {
 		return (
@@ -55,7 +55,8 @@ const Toolkit = () => {
 	};
 
 	return (
-		<div className='relative h-fit md:h-[180rem] min-[830px]:h-[160rem] lg:h-[160rem] min-[1243px]:h-[120rem] 2xl:h-[150rem]  w-full px-3.5 md:px-9'>
+		// <div className='relative h-fit md:h-[180rem] min-[830px]:h-[160rem] lg:h-[160rem] min-[1243px]:h-[120rem] 2xl:h-[150rem]  w-full px-3.5 md:px-9'>
+		<div className='relative h-fit w-full px-3.5 md:px-9'>
 			<div
 				id='toolkit'
 				className='flex w-full flex-col justify-center self-center gap-[3.25rem] pb-[3.938rem] uppercase md:gap-[4.563rem] md:pb-[5.563rem] mt-[10.214rem] md:mt-[15.813rem]'>
