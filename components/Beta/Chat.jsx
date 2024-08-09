@@ -3,7 +3,7 @@
 import { getCookie, setCookie } from "cookies-next";
 import { Base64 } from "js-base64";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
 import { BETA_APP_QUERY_PARAMS, MESSAGE_ROLES, COOKIE_NAME } from "@constants";
@@ -30,13 +30,26 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 
 	const chatData = getCookie(COOKIE_NAME.CHAT) || "";
 
+	// Ref to hold the AbortController
+	const controllerRef = useRef(new AbortController());
+
 	useEffect(() => {
 		if (chatData) {
 			setChats(JSON.parse(chatData));
 		} else {
 			setChats([]);
+			if (controllerRef.current) {
+				controllerRef.current.abort();
+			}
+
 		}
-	}, [chatData]);
+	}, [chatData, partnerId, modelId, template]);
+
+	useEffect(() => {
+		if (errorMessage) {
+			setErrorMessage("");
+		}
+	}, [partnerId, modelId, template]);
 
 	const sendMessage = async (e) => {
 		e.preventDefault();
@@ -65,6 +78,14 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 			setErrorMessage("");
 		}
 
+		// Abort any ongoing request before sending a new one
+		if (controllerRef.current) {
+			controllerRef.current.abort();
+		}
+
+		// Initialize a new AbortController for the new request
+		controllerRef.current = new AbortController();
+
 		setIsLoading(true);
 
 		const loadingVal = [
@@ -81,8 +102,10 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 		setMessage("");
 
 		try {
+
 			const promptResponse = await fetch("/api/message/send", {
 				method: "POST",
+				signal: controllerRef.current.signal, // Use the signal from the AbortController
 				headers: {
 					"Content-Type": "application/json",
 				},
@@ -92,7 +115,6 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 					message,
 				}),
 			});
-
 			const data = await promptResponse.json();
 
 			if (data?.error) {
@@ -108,7 +130,13 @@ const Chat = ({ toggleComponentVisibility, disconnected }) => {
 
 			setIsLoading(false);
 		} catch (error) {
-			setErrorMessage(error.message);
+			if (error.name === 'AbortError') {
+				// Handle cancellation
+				setErrorMessage("Request was cancelled.");
+			} else {
+				setErrorMessage(error.message);
+				// Handle other errors
+			}
 			setIsLoading(false);
 		}
 	};

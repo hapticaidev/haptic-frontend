@@ -14,23 +14,23 @@ export async function POST(req) {
 		const fetch1 = await fetch(`${BASE_URL}/chat/partner/${partnerId}/model/${modelId}`, {
 			method: "POST",
 			cache: 'no-cache',
+			signal: req.signal,
 			headers: {
 				Authorization: `Bearer ${token}`,
 				"Access-Control-Allow-Credentials": "true",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({ prompt: message }),
-			// signal: AbortSignal.timeout(60000),
 		});
 		const fetch2 = await fetch(`${BASE_URL}/chat/partner/${partnerId}/model/${modelId}`, {
 			method: "POST",
+			signal: req.signal,
 			headers: {
 				Authorization: `Bearer ${token}`,
 				"Access-Control-Allow-Credentials": "true",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({ prompt: message }),
-			// signal: AbortSignal.timeout(60000),
 		});
 
 		// Execute both fetch requests in parallel
@@ -56,6 +56,11 @@ export async function POST(req) {
 
 		return NextResponse.json(response, { status: 200 });
 	} catch (error) {
+		if (error.name === 'AbortError') {
+			// Handle the abort error
+			return NextResponse.json({ error: 'Request was aborted' }, { status: 400 });
+		}
+		// Handle other errors
 		return NextResponse.json({ error: error.message }, { status: 500 });
 	}
 }
